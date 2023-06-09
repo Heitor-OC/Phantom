@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Link para o site de importação de imagens-->
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!-- or -->
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <!--Link das fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+
+        <title>Landing Page Phantom</title>
+
+        <!--Script troca de textos-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+        </script>
+    </head>
+    <body>
+        
+        <header>
+
+            <div class="navbar">
+                <a href="https://www.solar-guitars.com/" class="logo"><i class='bx bxs-ghost'></i>Phantom</a>
+
+                <ul class="navegação">
+                    <li><a href="artists">Artists</a></li>
+                    <li><a href="https://www.linkedin.com/in/heitor-costa-95511013a/">About Us</a></li>
+                    <li><a href="reviews">Reviews</a></li>
+                    <li><a href="https://www.linkedin.com/in/heitor-costa-95511013a/">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="header-icons">
+                <button onclick="openCart()"><i class='bx bxs-cart'></i></button>
+                <a href="#" class="action_btn"></a>
+                <div id="menu" class="toggle_btn"><i class='bx bx-menu' ></i></div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="artists">Artists</a></li>
+                <li><a href="https://www.linkedin.com/in/heitor-costa-95511013a/">About Us</a></li>
+                <li><a href="reviews">Reviews</a></li>
+                <li><a href="https://www.linkedin.com/in/heitor-costa-95511013a/">Contact Us</a></li>
+            </div>
+
+            <div id="shopping_cart" style="display:none" >
+                <ul>
+                    <img src="images/main1.png" class="buying">
+                        
+                    <li><button onclick="removeItem(1, 1299)">- </button> Qtd: <span id="qtd1">0 </span> <button onclick="addItem(1, 1299)">+</button></li>
+                        <li>Price: $<span id="price1">0</span></li>
+                
+                    <img src="images/main2.png" class="buying" >
+                
+                        <li><button onclick="removeItem(2, 1199)">- </button> Qtd: <span id="qtd2">0 </span> <button onclick="addItem(2, 1199)">+</button></li>
+                        <li>Price: $<span id="price2">0</span></li>
+                        <h3 id="total">Total: $<span id="totalPrice">0</span></h3>
+                        <button class="closeCart" onClick="closeCart()"><h3>Close</h3></button>
+                </ul>
+            </div>
+        </header>
+        
+        <main>
+            <section class="home">
+
+                <div class="home-img">
+                    <img src="images/produto1.png" class="type" style="width:822px; height: 2500px;">
+                </div>
+
+                <div id="div1" class="home-text" style="display:block">
+
+                    <h1>S1.7PB - Poplar Burst Matte</h1>
+                    <h5>" Cutting edge in function and design, this premium feature-loaded, rock to metal guitar belongs to
+                        the Solar Type S1 top of the line range, offering outstanding playability and elegance.nn "</h5>
+                    <h3>US $1,299.00</h3>
+                    <a href="#" onclick="addItem(1, 1299)" class="button">Buy Now!</a>
+
+                </div> 
+                <div id="div2" class="home-text" style="display:none">
+                    <h1>T1.6D - Aged Natural Matte / Distressed</h1>
+                    <h5>" Created with the most demanding six-string guitarists in mind, this premium feature-loaded guitar belongs<br> to the Solar
+                    Type T1 top of the line range, offering outstanding elegance and performance. "</h5>
+                    <h3>US $1,199.00</h3>
+                    <a href="#" onclick="addItem(2, 1199)" class="button">Buy Now!</a>
+            </div>
+            </section>
+            <section>
+                <div class="main">
+
+                    <div class="row1">
+                        <li><button onclick="trocaDiv1()" id="troca1"><img src="images/main1.png" onclick="slider('images/produto1.png')"></button>
+                        <p>TYPE S</p>
+                        </li>
+
+                        
+                    </div>
+
+                    <div class="row2">
+                        <li>
+                            <button onclick="trocaDiv2()" id="troca2"><img src="images/main2.png" onclick="slider('images/produto2.png')"></button>
+                            <p>TYPE T</p>
+                        </li>
+
+
+                    </div>
+
+                </div>
+            </section>
+         </main>
+
+        <footer class="creator">
+
+            <a href="https://www.linkedin.com/in/heitor-costa-95511013a/" >Developed by Heitor</a>
+
+        </footer>
+
+
+
+        <script src="script.js"></script>
+    </body>
+    
+ </html>
